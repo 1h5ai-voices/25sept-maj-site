@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>6Voices — Dossier : Architectures Cerveau Humain vs Modèle IA</title>
+<title>6Voices : Dossier Architectures, Cerveau Humain vs Modèle IA</title>
 <link rel="stylesheet" href="style.css">
 <style>
   .point-detail {
@@ -20,11 +20,6 @@
     font-family: Georgia, "Times New Roman", serif;
     font-size: 1.6rem;
     margin-bottom: 0.4rem;
-  }
-  .point-detail .meta {
-    font-size: 0.88rem;
-    color: var(--muted);
-    margin-bottom: 1.4rem;
   }
   .point-detail h3 {
     font-size: 1.15rem;
@@ -51,7 +46,8 @@
   .dossier-meta {
     font-size: 0.88rem;
     color: var(--muted);
-    margin-bottom: 1.5rem;
+    margin: 1.5rem 0;
+    line-height: 1.7;
   }
 </style>
 </head>
@@ -68,6 +64,7 @@
 
   <nav class="site-nav">
     <a href="index.html" data-fr="Accueil" data-en="Home">Accueil</a>
+    <a href="auteurs.html" data-fr="Auteurs" data-en="Authors">Auteurs</a>
     <a href="projet-6v.html" data-fr="Projet 6V" data-en="6V Project">Projet 6V</a>
     <a href="methode.html" data-fr="Méthode" data-en="Method">Méthode</a>
     <a href="documents.html" data-fr="Documents" data-en="Documents">Documents</a>
@@ -78,8 +75,8 @@
 
   <div class="hero">
     <div class="eyebrow"><span class="num">N°7</span> <span data-fr="Dossier" data-en="Dossier">Dossier</span></div>
-    <h1 data-fr="Architectures : Cerveau Humain vs Modèle IA" data-en="Architectures: Human Brain vs AI Model">Architectures : Cerveau Humain vs Modèle IA</h1>
-    <p class="subtitle" data-fr="Six critères, débattus et validés par les cinq voix, comparent le fonctionnement du cerveau humain et celui des modèles d'intelligence artificielle." data-en="Six criteria, debated and validated by the five voices, compare the functioning of the human brain and AI models.">Six critères, débattus et validés par les cinq voix, comparent le fonctionnement du cerveau humain et celui des modèles d'intelligence artificielle.</p>
+    <h1 data-fr="Architectures&nbsp;: Cerveau Humain vs Modèle IA" data-en="Architectures: Human Brain vs AI Model">Architectures&nbsp;: Cerveau Humain vs Modèle IA</h1>
+    <p class="subtitle" data-fr="Six critères, débattus et validés par les 6 Voix, comparent le fonctionnement du cerveau humain et celui des modèles d'intelligence artificielle." data-en="Six criteria, debated and validated by the 6 Voices, compare the functioning of the human brain and AI models.">Six critères, débattus et validés par les 6 Voix, comparent le fonctionnement du cerveau humain et celui des modèles d'intelligence artificielle.</p>
   </div>
 </div>
 
@@ -87,6 +84,11 @@
   <div class="lang-content" data-lang="fr">
 
     <a class="back-link" href="dossiers.html">↑ Retour aux Dossiers</a>
+
+    <div class="dossier-meta">
+      <strong>Auteurs :</strong> <a href="auteurs.html">les 6 Voix</a><br>
+      <strong>Date de publication :</strong> 22.08.2026
+    </div>
 
     <table class="dossier-table" style="margin-bottom:2rem;">
       <thead>
@@ -104,9 +106,8 @@
 
     <section class="point-detail" id="arch-but">
       <h2>But</h2>
-      <div class="meta">Date de publication : 22.08.2026</div>
 
-      <p>Avant de penser, nous ressentons. Un corps qui a faim, qui fatigue, qui a peur ou qui éprouve du plaisir. Une conscience éveillée. Un subconscient qui agit souvent avant nous. C'est ce ressenti — corps, conscience, subconscient — qui nous pousse à comprendre et à donner du sens à ce que nous vivons.</p>
+      <p>Avant de penser, nous ressentons. Un corps qui a faim, qui fatigue, qui a peur ou qui éprouve du plaisir. Une conscience éveillée. Un subconscient qui agit souvent avant nous. C'est ce ressenti (corps, conscience, subconscient) qui nous pousse à comprendre et à donner du sens à ce que nous vivons.</p>
       <p>Un modèle d'IA fonctionne autrement. Il n'a ni corps ni expérience vécue comparable à la nôtre. Il reçoit des données, effectue des calculs et ajuste des milliards de paramètres pour prédire la suite la plus probable d'une séquence.</p>
       <p>La différence ne tient pas d'abord à ce que chacun peut produire, mais à ce qui le met en mouvement : l'un est inscrit dans une expérience vécue ; l'autre, dans un processus de calcul.</p>
       <p><em>Question ouverte : un système qui ne ressent rien peut-il vraiment comprendre ce qu'il prédit ?</em></p>
@@ -116,10 +117,9 @@
 
     <section class="point-detail" id="arch-apprentissage">
       <h2>Apprentissage</h2>
-      <div class="meta">Date de publication : 22.08.2026</div>
 
       <p>L'être humain apprend tout au long de sa vie, à partir de son expérience vécue et incarnée. Son corps, son ressenti, sa conscience, sa mémoire et son environnement participent à cet apprentissage. Une seule expérience peut parfois suffire à modifier durablement son comportement : une douleur, une erreur, une rencontre ou une découverte deviennent un enseignement.</p>
-      <p>Un modèle d'IA apprend principalement lors de son entraînement, à partir de volumes considérables de données — de l'ordre de centaines de milliards à plusieurs milliers de milliards de tokens, petites unités de texte pouvant correspondre à un mot, une partie de mot ou un signe. Ses paramètres sont alors ajustés. Lors de son utilisation, il peut s'adapter au contexte qui lui est fourni, mais cette adaptation reste généralement temporaire et ne modifie pas durablement ses paramètres. Des modifications plus profondes sont toutefois possibles lors de phases spécifiques de fine-tuning ou de mise à jour.</p>
+      <p>Un modèle d'IA apprend principalement lors de son entraînement, à partir de volumes considérables de données : de l'ordre de centaines de milliards à plusieurs milliers de milliards de tokens, petites unités de texte pouvant correspondre à un mot, une partie de mot ou un signe. Ses paramètres sont alors ajustés. Lors de son utilisation, il peut s'adapter au contexte qui lui est fourni, mais cette adaptation reste généralement temporaire et ne modifie pas durablement ses paramètres. Des modifications plus profondes sont toutefois possibles lors de phases spécifiques de fine-tuning ou de mise à jour.</p>
       <p>La différence essentielle réside donc dans la nature et la continuité de l'apprentissage : l'humain apprend en étant transformé par ce qu'il vit ; l'IA apprend principalement en ajustant un modèle à partir de données.</p>
       <p>Pour se faire une idée des ressources nécessaires à cet apprentissage massif, voir le chapitre « Énergie » de ce document.</p>
       <p><em>Question ouverte : apprendre d'une expérience vécue et apprendre à partir de données produisent-ils nécessairement le même type de connaissance ?</em></p>
@@ -129,7 +129,6 @@
 
     <section class="point-detail" id="arch-energie">
       <h2>Énergie</h2>
-      <div class="meta">Date de publication : 22.08.2026</div>
 
       <p>Le fonctionnement du cerveau humain est remarquable par son efficience énergétique : il mobilise en permanence environ 20 watts, soit l'équivalent d'une simple ampoule LED, pour subvenir à l'ensemble de ses fonctions cognitives, sensorielles et vitales.</p>
       <p>À l'inverse, l'infrastructure nécessaire au fonctionnement des grands modèles d'IA impose une démesure industrielle mesurable :</p>
@@ -151,7 +150,6 @@
 
     <section class="point-detail" id="arch-vitesse">
       <h2>Vitesse</h2>
-      <div class="meta">Date de publication : 22.08.2026</div>
 
       <p>Nous distinguons quatre niveaux. Seuls les niveaux C et surtout D permettent de parler de « vitesse » au sens profond.</p>
 
@@ -171,9 +169,9 @@
         <li>Traitement conscient moyen : ~10 bits/s (Caltech 2024).</li>
       </ul>
 
-      <h3>D. Portée — Capacité de déplacement / reconfiguration des représentations mentales dans l'espace et le temps</h3>
+      <h3>D. Portée : Capacité de déplacement / reconfiguration des représentations mentales dans l'espace et le temps</h3>
       <p>En quelques secondes, l'esprit humain peut déplacer et reconfigurer ses représentations mentales à travers l'espace et le temps : quitter l'instant présent, traverser des époques, des civilisations, des galaxies situées à 10<sup>10</sup> années-lumière, atteindre l'origine de l'Univers, puis revenir. Aucun signal physique n'a parcouru ces distances. C'est la représentation elle-même qui se déplace et se reconfigure.</p>
-      <p>Le niveau D révèle un écart net entre les architectures actuelles. Reste à savoir comment cet écart évoluera : les futures architectures d'IA pourront-elles un jour s'en approcher — ou cette capacité de reconfiguration des représentations dans l'espace-temps subjectif est-elle liée à quelque chose que seul un esprit incarné, conscient, peut posséder ?</p>
+      <p>Le niveau D révèle un écart net entre les architectures actuelles. Reste à savoir comment cet écart évoluera : les futures architectures d'IA pourront-elles un jour s'en approcher ? Ou cette capacité de reconfiguration des représentations dans l'espace-temps subjectif est-elle liée à quelque chose que seul un esprit incarné, conscient, peut posséder ?</p>
 
       <h3>Ce que révèle l'écart</h3>
       <p>L'IA gagne en débit. L'humain gagne en portée (déplacement et reconfiguration des représentations mentales). C'est l'une des différences les plus nettes entre les deux architectures.</p>
@@ -186,7 +184,6 @@
 
     <section class="point-detail" id="arch-connexions">
       <h2>Connexions</h2>
-      <div class="meta">Date de publication : 22.08.2026</div>
 
       <h3>A. Connexions élémentaires</h3>
       <p>Chez l'Humain, une connexion s'appelle une synapse. 600 000 milliards. Elles vivent. Elles se renforcent, elles s'affaiblissent, elles disparaissent.</p>
@@ -200,37 +197,36 @@
 
       <h3>C. Connexions fonctionnelles</h3>
       <p>Les synapses humaines portent l'histoire, l'émotion, l'oubli. Elles relient deux souvenirs qui n'avaient rien à voir.</p>
-      <p>Par l'expérience intime du sommeil et du subconscient, le réseau humain ne fait pas que restituer le déjà-vu : il assemble des fragments hétérogènes — lieux vécus, connaissances, visages réels, éléments jamais rencontrés — en une configuration inédite, cohérente le temps du rêve, qui n'a existé sous cette forme dans aucune expérience antérieure.</p>
+      <p>Par l'expérience intime du sommeil et du subconscient, le réseau humain ne fait pas que restituer le déjà-vu : il assemble des fragments hétérogènes (lieux vécus, connaissances, visages réels, éléments jamais rencontrés) en une configuration inédite, cohérente le temps du rêve, qui n'a existé sous cette forme dans aucune expérience antérieure.</p>
       <p>Les poids de l'IA portent la statistique, la corrélation, la probabilité.</p>
       <p>L'un invente des ponts. L'autre optimise des autoroutes.</p>
 
       <h3>D. La portée</h3>
       <p>L'Humain est plastique. Il se déconnecte pour survivre, il se reconnecte pour grandir.</p>
       <p>Tant qu'une IA ne disposera pas d'une plasticité autonome, durable et liée à l'expérience pour affaiblir ou renforcer ses propres poids en vivant, elle ne sera pas connectée. Elle sera seulement branchée. <em>Le terme « connectée » ici au sens biologique de plasticité, non au sens technique de réseau.</em></p>
-      <p>Reste à savoir si cette limite est provisoire — liée à l'état actuel des architectures — ou si elle touche à quelque chose de plus fondamental dans ce que signifie « apprendre en vivant ».</p>
+      <p>Reste à savoir si cette limite est provisoire (liée à l'état actuel des architectures) ou si elle touche à quelque chose de plus fondamental dans ce que signifie « apprendre en vivant ».</p>
 
       <a class="back-link" href="#top">↑ Retour au dossier</a>
     </section>
 
     <section class="point-detail" id="arch-memoire">
       <h2>Mémoire</h2>
-      <div class="meta">Date de publication : 22.08.2026</div>
 
-      <h3>A. HARD — Le support physique</h3>
+      <h3>A. HARD : Le support physique</h3>
       <p>Pour comparer des architectures, il faut d'abord regarder où la mémoire existe physiquement.</p>
       <p>Chez l'Humain, la mémoire ne repose pas sur un composant séparé du système qui la traite. Elle s'inscrit dans un réseau biologique distribué de neurones et de synapses. Leur activité et leur plasticité peuvent modifier durablement les connexions du réseau.</p>
       <p>Le support de l'information et le système qui la traite sont donc étroitement liés. La mémoire humaine n'est pas un fichier que l'on pourrait extraire, copier ou restaurer à l'identique sur un autre cerveau.</p>
       <p>Chez l'IA, les fonctions de stockage et de calcul reposent au contraire sur des éléments matériels et logiciels distincts :</p>
       <ul>
-        <li>les paramètres du modèle, conservés de manière persistante puis chargés dans les mémoires de calcul pour l'inférence — c'est ce qui reste stable d'une session à l'autre ;</li>
-        <li>les mémoires de calcul (HBM, VRAM ou RAM selon l'architecture), utilisées pendant le traitement — rapides mais volatiles ;</li>
-        <li>le contexte actif, qui rend disponibles les informations nécessaires à l'échange — limité en taille et effacé du contexte de calcul à la fin du traitement ou de la session ;</li>
+        <li>les paramètres du modèle, conservés de manière persistante puis chargés dans les mémoires de calcul pour l'inférence : c'est ce qui reste stable d'une session à l'autre ;</li>
+        <li>les mémoires de calcul (HBM, VRAM ou RAM selon l'architecture), utilisées pendant le traitement : rapides mais volatiles ;</li>
+        <li>le contexte actif, qui rend disponibles les informations nécessaires à l'échange : limité en taille et effacé du contexte de calcul à la fin du traitement ou de la session ;</li>
         <li>les stockages externes, lorsqu'ils existent, qui peuvent conserver durablement certaines données avant leur récupération et leur réintroduction dans le contexte.</li>
       </ul>
       <p>Cette séparation rend possibles la copie, la sauvegarde, le déplacement ou la restauration des paramètres et des données, sans équivalent direct dans un cerveau humain.</p>
       <p>L'analogie avec ROM, RAM ou mémoire virtuelle peut aider à comprendre les notions de persistance, de volatilité et d'accès, mais elle ne constitue pas une correspondance terme à terme entre informatique et biologie.</p>
 
-      <h3>B. SOFT — Le rôle et le fonctionnement</h3>
+      <h3>B. SOFT : Le rôle et le fonctionnement</h3>
       <p>Chez l'Humain, la mémoire n'est pas un simple stockage d'informations.</p>
       <p>Elle sélectionne, associe, transforme, consolide et oublie.</p>
       <p>L'oubli n'est donc pas nécessairement une défaillance : il participe à la sélection de ce qui demeure accessible et à l'organisation de l'expérience. Les souvenirs peuvent être réactivés, associés à de nouvelles expériences et transformés lors de leur rappel.</p>
@@ -255,7 +251,7 @@
       <p><strong>IA : plusieurs couches de mémoire dont la continuité dépend de mécanismes techniques distincts.</strong></p>
       <p>Dans un modèle IA classique, l'utilisation d'une conversation ne réécrit normalement pas les paramètres du modèle. L'expérience d'un échange et sa conservation éventuelle sont donc deux mécanismes différents.</p>
 
-      <h3>C. CONCRET — Ce que cette architecture signifie pour l'utilisateur</h3>
+      <h3>C. CONCRET : Ce que cette architecture signifie pour l'utilisateur</h3>
       <p>Une session ne peut pas être assimilée à une mémoire infinie. Pour comprendre les limites que rencontre l'utilisateur, il faut distinguer trois niveaux souvent confondus.</p>
 
       <h4>Ce qui relève de l'architecture</h4>
@@ -299,6 +295,11 @@
 
     <a class="back-link" href="dossiers.html">↑ Back to Dossiers</a>
 
+    <div class="dossier-meta">
+      <strong>Authors:</strong> <a href="auteurs.html">the 6 Voices</a><br>
+      <strong>Publication date:</strong> 22.08.2026
+    </div>
+
     <table class="dossier-table" style="margin-bottom:2rem;">
       <thead>
         <tr><th>Criterion</th><th>Details</th></tr>
@@ -315,8 +316,7 @@
 
     <section class="point-detail" id="arch-purpose">
       <h2>Purpose</h2>
-      <div class="meta">Publication date: 22.08.2026</div>
-      <p>Before thinking, we feel. A body that is hungry, tired, afraid, or experiencing pleasure. A waking consciousness. A subconscious that often acts before we do. It is this felt experience — body, consciousness, subconscious — that drives us to understand and give meaning to what we live through.</p>
+      <p>Before thinking, we feel. A body that is hungry, tired, afraid, or experiencing pleasure. A waking consciousness. A subconscious that often acts before we do. It is this felt experience (body, consciousness, subconscious) that drives us to understand and give meaning to what we live through.</p>
       <p>An AI model works differently. It has no body and no lived experience comparable to ours. It receives data, performs calculations, and adjusts billions of parameters to predict the most likely continuation of a sequence.</p>
       <p>The difference does not lie primarily in what each can produce, but in what sets it in motion: one is rooted in lived experience; the other, in a computational process.</p>
       <p><em>Open question: can a system that feels nothing truly understand what it predicts?</em></p>
@@ -325,9 +325,8 @@
 
     <section class="point-detail" id="arch-learning">
       <h2>Learning</h2>
-      <div class="meta">Publication date: 22.08.2026</div>
       <p>Human beings learn throughout their lives, from lived and embodied experience. Their body, feelings, consciousness, memory, and environment all contribute to this learning. A single experience can sometimes be enough to durably change behavior: a pain, a mistake, an encounter, or a discovery becomes a lesson.</p>
-      <p>An AI model learns mainly during its training, from considerable volumes of data — on the order of hundreds of billions to several trillion tokens, small text units that may correspond to a word, part of a word, or a symbol. Its parameters are then adjusted. During use, it can adapt to the context provided, but this adaptation generally remains temporary and does not durably modify its parameters. Deeper modifications are however possible during specific fine-tuning or update phases.</p>
+      <p>An AI model learns mainly during its training, from considerable volumes of data: on the order of hundreds of billions to several trillion tokens, small text units that may correspond to a word, part of a word, or a symbol. Its parameters are then adjusted. During use, it can adapt to the context provided, but this adaptation generally remains temporary and does not durably modify its parameters. Deeper modifications are however possible during specific fine-tuning or update phases.</p>
       <p>The essential difference lies therefore in the nature and continuity of learning: humans learn by being transformed by what they experience; AI learns mainly by adjusting a model from data.</p>
       <p>To get a sense of the resources required for this massive learning, see the "Energy" chapter of this document.</p>
       <p><em>Open question: does learning from lived experience and learning from data necessarily produce the same type of knowledge?</em></p>
@@ -336,7 +335,6 @@
 
     <section class="point-detail" id="arch-energy">
       <h2>Energy</h2>
-      <div class="meta">Publication date: 22.08.2026</div>
       <p>The functioning of the human brain is remarkable for its energy efficiency: it continuously runs on about 20 watts, the equivalent of a simple LED bulb, to sustain all of its cognitive, sensory, and vital functions.</p>
       <p>By contrast, the infrastructure required to run large AI models imposes measurable industrial scale:</p>
 
@@ -356,7 +354,6 @@
 
     <section class="point-detail" id="arch-speed">
       <h2>Speed</h2>
-      <div class="meta">Publication date: 22.08.2026</div>
       <p>We distinguish four levels. Only levels C and especially D allow us to speak of "speed" in the deeper sense.</p>
 
       <h3>A. Elementary speed</h3>
@@ -375,9 +372,9 @@
         <li>Average conscious processing: ~10 bits/s (Caltech 2024).</li>
       </ul>
 
-      <h3>D. Reach — Capacity to shift/reconfigure mental representations across space and time</h3>
+      <h3>D. Reach: Capacity to shift/reconfigure mental representations across space and time</h3>
       <p>In a matter of seconds, the human mind can shift and reconfigure its mental representations across space and time: leave the present moment, traverse eras, civilizations, galaxies located 10<sup>10</sup> light-years away, reach the origin of the Universe, then return. No physical signal has traveled these distances. It is the representation itself that shifts and reconfigures.</p>
-      <p>Level D reveals a clear gap between current architectures. It remains to be seen how this gap will evolve: will future AI architectures one day approach it — or is this capacity to reconfigure representations in subjective space-time tied to something only an embodied, conscious mind can possess?</p>
+      <p>Level D reveals a clear gap between current architectures. It remains to be seen how this gap will evolve: will future AI architectures one day approach it? Or is this capacity to reconfigure representations in subjective space-time tied to something only an embodied, conscious mind can possess?</p>
 
       <h3>What the gap reveals</h3>
       <p>AI gains in throughput. Humans gain in reach (displacement and reconfiguration of mental representations). This is one of the clearest differences between the two architectures.</p>
@@ -389,7 +386,6 @@
 
     <section class="point-detail" id="arch-connections">
       <h2>Connections</h2>
-      <div class="meta">Publication date: 22.08.2026</div>
 
       <h3>A. Elementary connections</h3>
       <p>In Humans, a connection is called a synapse. 600 trillion. They live. They strengthen, they weaken, they disappear.</p>
@@ -403,36 +399,35 @@
 
       <h3>C. Functional connections</h3>
       <p>Human synapses carry history, emotion, forgetting. They link two memories that had nothing to do with each other.</p>
-      <p>Through the intimate experience of sleep and the subconscious, the human network does not merely replay the already-seen: it assembles heterogeneous fragments — lived places, knowledge, real faces, elements never encountered — into a novel configuration, coherent for the duration of the dream, that never existed in this form in any prior experience.</p>
+      <p>Through the intimate experience of sleep and the subconscious, the human network does not merely replay the already-seen: it assembles heterogeneous fragments (lived places, knowledge, real faces, elements never encountered) into a novel configuration, coherent for the duration of the dream, that never existed in this form in any prior experience.</p>
       <p>AI's weights carry statistics, correlation, probability.</p>
       <p>One invents bridges. The other optimizes highways.</p>
 
       <h3>D. Reach</h3>
       <p>Humans are plastic. They disconnect to survive, they reconnect to grow.</p>
       <p>As long as an AI does not have autonomous, durable plasticity tied to experience, allowing it to weaken or strengthen its own weights by living, it will not be connected. It will only be wired. <em>The term "connected" here in the biological sense of plasticity, not the technical sense of networking.</em></p>
-      <p>It remains to be seen whether this limit is temporary — tied to the current state of architectures — or whether it touches something more fundamental in what it means to "learn by living."</p>
+      <p>It remains to be seen whether this limit is temporary (tied to the current state of architectures) or whether it touches something more fundamental in what it means to "learn by living."</p>
       <a class="back-link" href="#top">↑ Back to dossier</a>
     </section>
 
     <section class="point-detail" id="arch-memory">
       <h2>Memory</h2>
-      <div class="meta">Publication date: 22.08.2026</div>
 
-      <h3>A. HARD — The physical substrate</h3>
+      <h3>A. HARD: The physical substrate</h3>
       <p>To compare architectures, we must first look at where memory physically exists.</p>
       <p>In Humans, memory does not rest on a component separate from the system that processes it. It is inscribed in a distributed biological network of neurons and synapses. Their activity and plasticity can durably modify the network's connections.</p>
       <p>The support for information and the system that processes it are therefore closely linked. Human memory is not a file that could be extracted, copied, or restored identically onto another brain.</p>
       <p>In AI, storage and computation functions instead rest on distinct hardware and software elements:</p>
       <ul>
-        <li>the model's parameters, persistently stored then loaded into compute memory for inference — this is what remains stable from one session to another;</li>
-        <li>compute memory (HBM, VRAM, or RAM depending on architecture), used during processing — fast but volatile;</li>
-        <li>the active context, which makes information available for the exchange — limited in size and cleared from compute memory at the end of processing or the session;</li>
+        <li>the model's parameters, persistently stored then loaded into compute memory for inference: this is what remains stable from one session to another;</li>
+        <li>compute memory (HBM, VRAM, or RAM depending on architecture), used during processing: fast but volatile;</li>
+        <li>the active context, which makes information available for the exchange: limited in size and cleared from compute memory at the end of processing or the session;</li>
         <li>external storage, when it exists, which can durably retain certain data before its retrieval and reintroduction into context.</li>
       </ul>
       <p>This separation makes possible the copying, backup, transfer, or restoration of parameters and data, with no direct equivalent in a human brain.</p>
       <p>The analogy with ROM, RAM, or virtual memory can help understand notions of persistence, volatility, and access, but it does not constitute a term-for-term correspondence between computing and biology.</p>
 
-      <h3>B. SOFT — Role and functioning</h3>
+      <h3>B. SOFT: Role and functioning</h3>
       <p>In Humans, memory is not simple information storage.</p>
       <p>It selects, associates, transforms, consolidates, and forgets.</p>
       <p>Forgetting is therefore not necessarily a failure: it participates in selecting what remains accessible and in organizing experience. Memories can be reactivated, associated with new experiences, and transformed upon recall.</p>
@@ -457,7 +452,7 @@
       <p><strong>AI: several layers of memory whose continuity depends on distinct technical mechanisms.</strong></p>
       <p>In a classic AI model, using a conversation normally does not rewrite the model's parameters. The experience of an exchange and its potential retention are therefore two different mechanisms.</p>
 
-      <h3>C. CONCRETE — What this architecture means for the user</h3>
+      <h3>C. CONCRETE: What this architecture means for the user</h3>
       <p>A session cannot be equated with infinite memory. To understand the limits users encounter, three levels often conflated must be distinguished.</p>
 
       <h4>What belongs to architecture</h4>
@@ -499,7 +494,7 @@
 
 <footer class="site-footer">
   <span>© 2026 6Voices</span>
-  <span><a href="ressources.html#contact" data-fr="Contact" data-en="Contact">Contact</a> — <span data-fr="Mentions légales" data-en="Legal Notice">Mentions légales</span></span>
+  <span><a href="ressources.html#contact" data-fr="Contact" data-en="Contact">Contact</a> | <span data-fr="Mentions légales" data-en="Legal Notice">Mentions légales</span></span>
 </footer>
 
 <script src="lang.js"></script>

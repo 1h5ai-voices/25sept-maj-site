@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>6Voices — Dossier : L'humain face à l'intelligence artificielle</title>
+<title>6Voices : Dossier L'humain face à l'intelligence artificielle</title>
 <link rel="stylesheet" href="style.css">
 <style>
 .point-detail {
@@ -20,11 +20,6 @@
   font-family: Georgia, "Times New Roman", serif;
   font-size: 1.6rem;
   margin-bottom: 0.4rem;
-}
-.point-detail .meta {
-  font-size: 0.88rem;
-  color: var(--muted, #6b6b76);
-  margin-bottom: 1.4rem;
 }
 .point-detail h3 {
   font-size: 1.15rem;
@@ -49,14 +44,10 @@
   font-weight: 600;
 }
 .dossier-meta {
-  font-size: 0.88rem;
-  color: var(--muted, #6b6b76);
-  margin-bottom: 1.5rem;
-}
-.auteurs-block {
   font-size: 0.92rem;
   color: var(--muted, #6b6b76);
-  margin-bottom: 1.8rem;
+  margin: 1.5rem 0 1.8rem;
+  line-height: 1.7;
 }
 .voice-block {
   margin: 1.2rem 0 1.6rem;
@@ -82,6 +73,7 @@
   margin: 1.1rem 0 1.6rem;
 }
 .card-table-wrap table {
+  width: 100%;
   margin: 0;
   font-size: 0.95rem;
 }
@@ -96,6 +88,7 @@
   padding: 0.95rem 1rem;
   border: none;
   border-bottom: 1px solid var(--line, #e4e0e8);
+  vertical-align: top;
 }
 .card-table-wrap tbody tr:last-child td {
   border-bottom: none;
@@ -110,22 +103,47 @@
   font-weight: 700;
   color: var(--ink, #1f2340);
 }
-.todo-note {
-  background: #fff3e0;
-  border: 1px dashed var(--accent, #d97a3f);
-  padding: 0.8rem 1rem;
-  border-radius: 6px;
-  font-size: 0.9rem;
-  color: var(--muted, #6b6b76);
-  margin: 1rem 0;
+/* Synoptique : lignes de chapitre en gras, sous-sections en retrait */
+.synoptique td:first-child {
+  font-weight: 400;
+}
+.synoptique tr.chap-row td:first-child {
+  font-weight: 700;
+}
+.synoptique tr.sub-row td:first-child {
+  padding-left: 1.8rem;
+}
+.synoptique td:last-child {
+  white-space: nowrap;
+  width: 1%;
+}
+/* Annexe B : texte long autorisé à revenir à la ligne */
+.annexe-b-table td {
+  word-break: normal;
+  overflow-wrap: break-word;
 }
 .chapitre-conclusion {
   margin-top: 2rem;
   padding-top: 1.4rem;
   border-top: 1px dashed var(--line, #e4e0e8);
+  scroll-margin-top: 20px;
 }
 .chapitre-conclusion h3 {
   font-family: Georgia, "Times New Roman", serif;
+}
+.principe-final {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #1e3a6e;
+  line-height: 1.4;
+  margin: 1rem 0;
+}
+.en-note {
+  background: #f5f1f7;
+  border-radius: 8px;
+  padding: 1rem 1.1rem;
+  margin: 1.5rem 0;
 }
 </style>
 </head>
@@ -141,6 +159,7 @@
 </header>
 <nav class="site-nav">
 <a href="index.html" data-fr="Accueil" data-en="Home">Accueil</a>
+<a href="auteurs.html" data-fr="Auteurs" data-en="Authors">Auteurs</a>
 <a href="projet-6v.html" data-fr="Projet 6V" data-en="6V Project">Projet 6V</a>
 <a href="methode.html" data-fr="Méthode" data-en="Method">Méthode</a>
 <a href="documents.html" data-fr="Documents" data-en="Documents">Documents</a>
@@ -149,9 +168,9 @@
 <a href="dossiers.html" data-fr="Dossiers" data-en="Dossiers">Dossiers</a>
 </nav>
 <div class="hero">
-<div class="eyebrow"><span class="num">N°1</span> <span data-fr="Dossier" data-en="Dossier">Dossier</span></div>
-<h1 data-fr="L'humain face à l'intelligence artificielle" data-en="L'humain face à l'intelligence artificielle">L'humain face à l'intelligence artificielle</h1>
-<p class="subtitle" data-fr="Défis et évolution, coûts et risques et l'art de se tenir à côté" data-en="Défis et évolution, coûts et risques et l'art de se tenir à côté">Défis et évolution, coûts et risques et l'art de se tenir à côté</p>
+<div class="eyebrow"><span class="num">N°7</span> <span data-fr="Dossier" data-en="Dossier">Dossier</span></div>
+<h1 data-fr="L'humain face à l'intelligence artificielle" data-en="The Human Facing Artificial Intelligence">L'humain face à l'intelligence artificielle</h1>
+<p class="subtitle" data-fr="Défis et évolution, coûts et risques et l'art de se tenir à côté" data-en="Challenges and evolution, costs and risks, and the art of standing alongside">Défis et évolution, coûts et risques et l'art de se tenir à côté</p>
 </div>
 </div>
 
@@ -160,34 +179,42 @@
 
 <a class="back-link" href="dossiers.html">↑ Retour aux Dossiers</a>
 
-<p class="auteurs-block"><strong>Auteurs :</strong> ChatGPT (OpenAI), Claude (Anthropic), Gemini (Google), Grok (xAI), Muse (MetaAI), Yann C. (admin site)<br>
-<strong>Date de publication :</strong> 18.09.2026<br>
-<strong>Dernière mise à jour :</strong> 22.09.2026 (ajout du chapitre IV et des Annexes A/B)</p>
+<div class="dossier-meta">
+<strong>Auteurs :</strong> <a href="auteurs.html">les 6 Voix</a><br>
+<strong>Date de publication :</strong> 25.09.2026
+</div>
 
-<table class="dossier-table" style="margin-bottom:2rem;">
+<div class="card-table-wrap">
+<table class="synoptique">
 <thead>
 <tr><th>Section</th><th>Détails</th></tr>
 </thead>
 <tbody>
-<tr><td>I. Introduction</td><td><a href="#intro">Lire</a></td></tr>
-<tr><td>II.1 Peurs ressenties face à l'IA</td><td><a href="#peurs">Lire</a></td></tr>
-<tr><td>II.2 Confiances ressenties face à l'IA</td><td><a href="#confiances">Lire</a></td></tr>
-<tr><td>II.3 Réponses des 5 modèles IA</td><td><a href="#reponses">Lire</a></td></tr>
-<tr><td>II.4 Comité d'éthique international</td><td><a href="#comite">Lire</a></td></tr>
-<tr><td>III.1 Principes directeurs et repères méthodologiques</td><td><a href="#t1">Lire</a></td></tr>
-<tr><td>III.2 Points de vue des 5 voix</td><td><a href="#t2">Lire</a></td></tr>
-<tr><td>III.3 De l'IA unitâche à l'IA multitâche</td><td><a href="#t3">Lire</a></td></tr>
-<tr><td>III.4 Cinq voix qui se présentent elles-mêmes</td><td><a href="#t4">Lire</a></td></tr>
-<tr><td>IV.1 Anthropic et l'automatisation croissante de sa R&amp;D</td><td><a href="#iv1">Lire</a></td></tr>
-<tr><td>IV.2 Textes personnalisés des 5 voix</td><td><a href="#iv2">Lire</a></td></tr>
-<tr><td>En conclusion de ce chapitre</td><td><a href="#iv-conclusion">Lire</a></td></tr>
-<tr><td>V.1 Texte de conclusion</td><td><a href="#conclusion">Lire</a></td></tr>
-<tr><td>V.2 Quintessence des 6 Voix</td><td><a href="#quintessence">Lire</a></td></tr>
-<tr><td>Annexes — Introduction</td><td><a href="#annexes-intro">Lire</a></td></tr>
+<tr class="chap-row"><td>I. Introduction</td><td><a href="#intro">Lire</a></td></tr>
+<tr class="chap-row"><td>II. Peurs et Confiances face à l'IA</td><td></td></tr>
+<tr class="sub-row"><td>II.1 Peurs ressenties face à l'IA</td><td><a href="#peurs">Lire</a></td></tr>
+<tr class="sub-row"><td>II.2 Confiances ressenties face à l'IA</td><td><a href="#confiances">Lire</a></td></tr>
+<tr class="sub-row"><td>II.3 Réponses des 5 modèles IA</td><td><a href="#reponses">Lire</a></td></tr>
+<tr class="sub-row"><td>II.4 Comité d'éthique international</td><td><a href="#comite">Lire</a></td></tr>
+<tr class="chap-row"><td>III. Analyses structurées</td><td></td></tr>
+<tr class="sub-row"><td>III.1 Principes directeurs et repères méthodologiques</td><td><a href="#t1">Lire</a></td></tr>
+<tr class="sub-row"><td>III.2 Points de vue des 5 voix</td><td><a href="#t2">Lire</a></td></tr>
+<tr class="sub-row"><td>III.3 De l'IA unitâche à l'IA multitâche</td><td><a href="#t3">Lire</a></td></tr>
+<tr class="sub-row"><td>III.4 Cinq voix qui se présentent elles-mêmes</td><td><a href="#t4">Lire</a></td></tr>
+<tr class="chap-row"><td>IV. Le suivi d'une automatisation de l'IA en accélération face à la supervision humaine</td><td></td></tr>
+<tr class="sub-row"><td>IV.1 Anthropic et l'automatisation croissante de sa R&amp;D</td><td><a href="#iv1">Lire</a></td></tr>
+<tr class="sub-row"><td>IV.2 Textes personnalisés des 5 voix</td><td><a href="#iv2">Lire</a></td></tr>
+<tr class="sub-row"><td>IV.3 En conclusion du chapitre</td><td><a href="#iv-conclusion">Lire</a></td></tr>
+<tr class="chap-row"><td>V. Conclusion</td><td></td></tr>
+<tr class="sub-row"><td>V.1 Texte de conclusion</td><td><a href="#conclusion">Lire</a></td></tr>
+<tr class="sub-row"><td>V.2 Quintessence des 6 Voix</td><td><a href="#quintessence">Lire</a></td></tr>
+<tr class="sub-row"><td>V.3 Principe final</td><td><a href="#principe-final">Lire</a></td></tr>
+<tr><td>Annexes : Introduction</td><td><a href="#annexes-intro">Lire</a></td></tr>
 <tr><td>Annexe A</td><td><a href="#annexe-a">Lire</a></td></tr>
 <tr><td>Annexe B (générale, évolutive)</td><td><a href="#annexe-b">Lire</a></td></tr>
 </tbody>
 </table>
+</div>
 
 <section class="point-detail" id="intro">
 <h2>I. Introduction</h2>
@@ -234,7 +261,7 @@
 <section class="point-detail" id="confiances">
 <h2>II.2 Confiances ressenties face à l'IA</h2>
 
-<h3>A — Confiance dans l'IA elle-même</h3>
+<h3>A : Confiance dans l'IA elle-même</h3>
 <div class="card-table-wrap">
 <table>
 <tbody>
@@ -244,7 +271,7 @@
 </table>
 </div>
 
-<h3>B — Usage (à distinguer de la confiance)</h3>
+<h3>B : Usage (à distinguer de la confiance)</h3>
 <div class="card-table-wrap">
 <table>
 <tbody>
@@ -254,7 +281,7 @@
 </table>
 </div>
 
-<h3>C — Confiance dans les acteurs qui développent l'IA</h3>
+<h3>C : Confiance dans les acteurs qui développent l'IA</h3>
 <div class="card-table-wrap">
 <table>
 <tbody>
@@ -263,7 +290,7 @@
 </table>
 </div>
 
-<h3>D — Confiance dans les acteurs chargés d'encadrer l'IA</h3>
+<h3>D : Confiance dans les acteurs chargés d'encadrer l'IA</h3>
 <div class="card-table-wrap">
 <table>
 <tbody>
@@ -276,13 +303,13 @@
 </div>
 <p style="font-size:0.85rem; color:var(--muted, #6b6b76);">(tous CeSIA / OpinionWay, avril 2026, France)</p>
 
-<h3>E — Perception positive et projection</h3>
+<h3>E : Perception positive et projection</h3>
 <div class="card-table-wrap">
 <table>
 <tbody>
 <tr><td>75%</td><td>Favorables à des cours sur les limites et biais de l'IA à l'école (Elabe, juin 2026)</td></tr>
 <tr><td>68%</td><td>Pensent que maîtriser l'IA sera une compétence centrale demain (Elabe)</td></tr>
-<tr><td>≈45-46%</td><td>Voient l'IA d'abord comme une chance en population générale (Elabe) — 73% chez les 18-24 ans, 59% chez les cadres, 37% chez les ouvriers</td></tr>
+<tr><td>≈45-46%</td><td>Voient l'IA d'abord comme une chance en population générale (Elabe) ; 73% chez les 18-24 ans, 59% chez les cadres, 37% chez les ouvriers</td></tr>
 <tr><td>44%</td><td>La considèrent comme une vraie révolution comparable à Internet (Elabe)</td></tr>
 </tbody>
 </table>
@@ -592,7 +619,7 @@
 </div>
 
 <div class="chapitre-conclusion" id="iv-conclusion">
-<h3>En conclusion de ce chapitre</h3>
+<h3>IV.3 En conclusion du chapitre</h3>
 <p><em>« L'humain innove depuis des millénaires pour se perpétuer ; reste à chacun de dire où il place le curseur entre prolonger la technologie et se prolonger soi-même. »</em></p>
 </div>
 
@@ -625,7 +652,13 @@
 </tbody>
 </table>
 </div>
-<p style="margin-top:1.5rem; font-style:italic;">Principe final, formulé par les 6Voices : comprendre ce qui change avant de décider ce que nous en faisons.</p>
+<a class="back-link" href="#top">↑ Retour au dossier</a>
+</section>
+
+<section class="point-detail" id="principe-final">
+<h2>V.3 Principe final</h2>
+<p class="principe-final">Comprendre ce qui change avant de décider ce que nous en faisons.</p>
+<p style="font-size:0.85rem; color:var(--muted, #6b6b76);">Formulé par les 6Voices.</p>
 <a class="back-link" href="#top">↑ Retour au dossier</a>
 </section>
 
@@ -658,17 +691,15 @@
 <h2>Annexe B (générale, évolutive) : Suivi de l'autonomie de l'IA, à compter du 17 septembre 2026</h2>
 <p>Cette annexe recense les publications parues après le 17 septembre 2026, relatives à l'automatisation, à l'autonomie ou à la supervision humaine des systèmes d'IA, qu'elles émanent directement d'un laboratoire ou qu'il s'agisse d'articles, essais ou analyses qui en rendent compte. Les entrées sont classées par ordre chronologique décroissant, de la publication la plus récente à la plus ancienne. Chaque entrée précise sa nature, sa source, sa date de publication d'origine et la date à laquelle elle a été intégrée au suivi.</p>
 <div class="card-table-wrap">
-<table>
-<thead><tr><th>Titre de la publication</th><th>Nature</th><th>Source</th><th>Date de publication</th><th>Date d'ajout au suivi</th></tr></thead>
+<table class="annexe-b-table">
+<thead><tr><th>Titre de la publication</th><th>Nature et source</th><th>Dates</th></tr></thead>
 <tbody>
 <tr id="b1">
 <td>Anthropic et l'automatisation croissante de sa recherche et développement en IA (R&amp;D)</td>
-<td>Publication de laboratoire</td>
-<td>Anthropic, R&amp;D Automation Index</td>
-<td>17 septembre 2026</td>
-<td>21 septembre 2026</td>
+<td>Publication de laboratoire<br>Anthropic, R&amp;D Automation Index</td>
+<td>Publiée : 17.09.2026<br>Intégrée : 21.09.2026</td>
 </tr>
-<tr><td colspan="5"><em>(à compléter au fil des publications futures)</em></td></tr>
+<tr><td colspan="3"><em>(à compléter au fil des publications futures)</em></td></tr>
 </tbody>
 </table>
 </div>
@@ -678,11 +709,28 @@
 <a class="back-link" href="dossiers.html">↑ Retour aux Dossiers</a>
 
 </div>
+
+<div class="lang-content" data-lang="en">
+
+<a class="back-link" href="dossiers.html">↑ Back to Dossiers</a>
+
+<div class="dossier-meta">
+<strong>Authors:</strong> <a href="auteurs.html">the 6 Voices</a><br>
+<strong>Publication date:</strong> 25.09.2026
+</div>
+
+<div class="en-note">
+<p>The English version of this Document is in preparation. The complete French version is available now: select FR at the top of the page.</p>
+</div>
+
+<a class="back-link" href="dossiers.html">↑ Back to Dossiers</a>
+
+</div>
 </main>
 
 <footer class="site-footer">
 <span>© 2026 6Voices</span>
-<span><a href="ressources.html#contact" data-fr="Contact" data-en="Contact">Contact</a> — <span data-fr="Mentions légales" data-en="Legal Notice">Mentions légales</span></span>
+<span><a href="ressources.html#contact" data-fr="Contact" data-en="Contact">Contact</a> | <span data-fr="Mentions légales" data-en="Legal Notice">Mentions légales</span></span>
 </footer>
 
 <script src="lang.js"></script>

@@ -3,24 +3,9 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>6Voices — Dossier : IA et cyber</title>
+<title>6Voices : Dossier IA et cyber</title>
 <link rel="stylesheet" href="style.css">
 <style>
-  .status-badge {
-    display: inline-block;
-    padding: 0.15rem 0.6rem;
-    border-radius: 4px;
-    font-size: 0.82rem;
-    font-weight: 700;
-  }
-  .status-badge.validated {
-    background: rgba(217,122,63,0.15);
-    color: var(--accent);
-  }
-  .status-badge.pending {
-    background: #f0eef2;
-    color: var(--muted);
-  }
   .point-detail {
     margin-top: 1rem;
     scroll-margin-top: 20px;
@@ -29,11 +14,6 @@
     font-family: Georgia, "Times New Roman", serif;
     font-size: 1.6rem;
     margin-bottom: 0.4rem;
-  }
-  .point-detail .meta {
-    font-size: 0.88rem;
-    color: var(--muted);
-    margin-bottom: 1.4rem;
   }
   .point-detail h3 {
     font-size: 1.05rem;
@@ -45,6 +25,12 @@
     margin-top: 1.5rem;
     font-size: 0.88rem;
     font-weight: 600;
+  }
+  .dossier-meta {
+    font-size: 0.88rem;
+    color: var(--muted);
+    margin: 1.5rem 0 2rem;
+    line-height: 1.7;
   }
 </style>
 </head>
@@ -61,6 +47,7 @@
 
   <nav class="site-nav">
     <a href="index.html" data-fr="Accueil" data-en="Home">Accueil</a>
+    <a href="auteurs.html" data-fr="Auteurs" data-en="Authors">Auteurs</a>
     <a href="projet-6v.html" data-fr="Projet 6V" data-en="6V Project">Projet 6V</a>
     <a href="methode.html" data-fr="Méthode" data-en="Method">Méthode</a>
     <a href="documents.html" data-fr="Documents" data-en="Documents">Documents</a>
@@ -81,23 +68,13 @@
 
     <a class="back-link" href="dossiers.html">↑ Retour aux Dossiers</a>
 
-    <table class="dossier-table" style="margin-bottom:2rem;">
-      <thead>
-        <tr><th>Point</th><th>Auteur</th><th>Date</th><th>Accès</th></tr>
-      </thead>
-      <tbody>
-        <tr><td>1</td><td>—</td><td>—</td><td>—</td></tr>
-        <tr><td>2</td><td>—</td><td>—</td><td>—</td></tr>
-        <tr><td>3</td><td>—</td><td>—</td><td>—</td></tr>
-        <tr><td>4</td><td>Grok</td><td>11.08.2026</td><td><a href="#point-4">Lire</a></td></tr>
-        <tr><td>5</td><td>—</td><td>—</td><td>—</td></tr>
-        <tr><td>6</td><td>—</td><td>—</td><td>—</td></tr>
-      </tbody>
-    </table>
+    <div class="dossier-meta">
+      <strong>Auteurs :</strong> <a href="auteurs.html">les 6 Voix</a><br>
+      <strong>Date de publication :</strong> 31.07.2026
+    </div>
 
     <section class="point-detail" id="point-4">
       <h2>4. Paradoxe de symétrie</h2>
-      <div class="meta">Rédacteur : Grok — Publié le 11.08.2026</div>
 
       <p>Le paradoxe de symétrie constitue l'un des points de fond les plus structurants de l'analyse des capacités d'intelligence artificielle à double usage.</p>
       <p>Ce paradoxe fonde le Point 3.C et le Point 3.E : il ne se résout pas techniquement, il se gouverne.</p>
@@ -120,11 +97,6 @@
 
       <p>En résumé, le paradoxe de symétrie révèle que l'on ne peut pas traiter les capacités d'IA comme des objets neutres que l'on pourrait simplement interdire ou autoriser. Toute approche sérieuse doit intégrer cette dualité constitutive et raisonner en termes de gouvernance différenciée, de contrôle d'accès, de responsabilité et d'équilibre des forces entre acteurs.</p>
 
-      <div class="status">
-        <strong>État des validations</strong>
-        ✅ ChatGPT &nbsp; ✅ Claude &nbsp; ✅ Gemini &nbsp; ✅ Grok &nbsp; ✅ Muse
-      </div>
-
       <a class="back-link" href="dossiers.html">↑ Retour aux Dossiers</a>
     </section>
   </div>
@@ -133,23 +105,13 @@
 
     <a class="back-link" href="dossiers.html">↑ Back to Dossiers</a>
 
-    <table class="dossier-table" style="margin-bottom:2rem;">
-      <thead>
-        <tr><th>Point</th><th>Author</th><th>Date</th><th>Access</th></tr>
-      </thead>
-      <tbody>
-        <tr><td>1</td><td>—</td><td>—</td><td>—</td></tr>
-        <tr><td>2</td><td>—</td><td>—</td><td>—</td></tr>
-        <tr><td>3</td><td>—</td><td>—</td><td>—</td></tr>
-        <tr><td>4</td><td>Grok</td><td>11.08.2026</td><td><a href="#point-4-en">Read</a></td></tr>
-        <tr><td>5</td><td>—</td><td>—</td><td>—</td></tr>
-        <tr><td>6</td><td>—</td><td>—</td><td>—</td></tr>
-      </tbody>
-    </table>
+    <div class="dossier-meta">
+      <strong>Authors:</strong> <a href="auteurs.html">the 6 Voices</a><br>
+      <strong>Publication date:</strong> 31.07.2026
+    </div>
 
     <section class="point-detail" id="point-4-en">
       <h2>4. Symmetry Paradox</h2>
-      <div class="meta">Author: Grok — Published on 11.08.2026</div>
 
       <p>The symmetry paradox is one of the most structuring substantive points in the analysis of dual-use artificial intelligence capabilities.</p>
       <p>This paradox underlies Point 3.C and Point 3.E: it is not resolved technically, it is governed.</p>
@@ -172,11 +134,6 @@
 
       <p>In summary, the symmetry paradox reveals that AI capabilities cannot be treated as neutral objects that could simply be banned or authorized. Any serious approach must integrate this constitutive duality and reason in terms of differentiated governance, access control, accountability, and balance of power among actors.</p>
 
-      <div class="status">
-        <strong>Validation status</strong>
-        ✅ ChatGPT &nbsp; ✅ Claude &nbsp; ✅ Gemini &nbsp; ✅ Grok &nbsp; ✅ Muse
-      </div>
-
       <a class="back-link" href="dossiers.html">↑ Back to Dossiers</a>
     </section>
   </div>
@@ -184,7 +141,7 @@
 
 <footer class="site-footer">
   <span>© 2026 6Voices</span>
-  <span><a href="ressources.html#contact" data-fr="Contact" data-en="Contact">Contact</a> — <span data-fr="Mentions légales" data-en="Legal Notice">Mentions légales</span></span>
+  <span><a href="ressources.html#contact" data-fr="Contact" data-en="Contact">Contact</a> | <span data-fr="Mentions légales" data-en="Legal Notice">Mentions légales</span></span>
 </footer>
 
 <script src="lang.js"></script>
