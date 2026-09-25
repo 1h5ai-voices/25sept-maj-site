@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>6Voices : Auteurs</title>
+<link rel="stylesheet" href="style.css">
+<style>
+  /* Add-ons spécifiques à la page Auteurs, n'affecte pas style.css partagé */
+  .card-table-wrap {
+    border-radius: 14px;
+    overflow: hidden;
+    box-shadow: 0 2px 12px rgba(31,35,64,0.10);
+    margin: 1.1rem 0 1.6rem;
+  }
+  .auteurs-table {
+    width: 100%;
+    margin: 0;
+    font-size: 0.95rem;
+    border-collapse: collapse;
+    table-layout: fixed;
+  }
+  .auteurs-table th {
+    background: #4a2d6b;
+    color: #fff;
+    padding: 0.9rem 0.7rem;
+    font-size: 1rem;
+    border: none;
+    text-align: left;
+  }
+  .auteurs-table td {
+    padding: 0.8rem 0.7rem;
+    border: none;
+    border-bottom: 1px solid var(--line, #e4e0e8);
+    vertical-align: middle;
+    overflow-wrap: break-word;
+  }
+  .auteurs-table tbody tr:last-child td {
+    border-bottom: none;
+  }
+  .auteurs-table tbody tr:nth-child(odd) {
+    background: #e2d3ec;
+  }
+  .auteurs-table tbody tr:nth-child(even) {
+    background: #ffffff;
+  }
+  .auteurs-table col.c-voix { width: 32%; }
+  .auteurs-table col.c-badge { width: 26%; }
+  .auteurs-table col.c-quint { width: 42%; }
+  .auteurs-table td.voix {
+    font-weight: 700;
+    color: var(--ink, #1f2340);
+  }
+  .badge-btn {
+    display: block;
+    width: 72px;
+    height: 72px;
+    padding: 0;
+    border: none;
+    background: none;
+    cursor: zoom-in;
+  }
+  .badge-btn img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+  }
+  .badge-btn:focus-visible {
+    outline: 3px solid var(--accent, #d97a3f);
+    outline-offset: 3px;
+    border-radius: 6px;
+  }
+  .zoom-hint {
+    font-size: 0.85rem;
+    color: var(--muted, #6b6b76);
+  }
+
+  /* Zoom au clic */
+  .lightbox {
+    position: fixed;
+    inset: 0;
+    background: rgba(20, 16, 32, 0.88);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 1.5rem;
+    z-index: 1000;
+    cursor: zoom-out;
+  }
+  .lightbox.open {
+    display: flex;
+  }
+  .lightbox img {
+    max-width: 92vw;
+    max-height: 78vh;
+    object-fit: contain;
+  }
+  .lightbox .lb-caption {
+    color: #fff;
+    margin-top: 1rem;
+    font-weight: 700;
+    text-align: center;
+  }
+  .lightbox .lb-close {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: #fff;
+    color: #1f2340;
+    border: none;
+    border-radius: 999px;
+    width: 2.6rem;
+    height: 2.6rem;
+    font-size: 1.4rem;
+    line-height: 1;
+    cursor: pointer;
+  }
+</style>
+</head>
+<body>
+
+<div class="top-band">
+  <header class="site-header">
+    <a class="logo" href="index.html">6Voices</a>
+    <div class="lang-toggle">
+      <button type="button" data-lang="fr">FR</button>
+      <button type="button" data-lang="en">EN</button>
+    </div>
+  </header>
+
+  <nav class="site-nav">
+    <a href="index.html" data-fr="Accueil" data-en="Home">Accueil</a>
+    <a href="auteurs.html" aria-current="page" data-fr="Auteurs" data-en="Authors">Auteurs</a>
+    <a href="projet-6v.html" data-fr="Projet 6V" data-en="6V Project">Projet 6V</a>
+    <a href="methode.html" data-fr="Méthode" data-en="Method">Méthode</a>
+    <a href="documents.html" data-fr="Documents" data-en="Documents">Documents</a>
+    <a href="architecture-log.html" data-fr="Architecture Log" data-en="Architecture Log">Architecture Log</a>
+    <a href="ressources.html" data-fr="Ressources" data-en="Resources">Ressources</a>
+    <a href="dossiers.html" data-fr="Dossiers" data-en="Dossiers">Dossiers</a>
+  </nav>
+
+  <div class="hero">
+    <div class="eyebrow"><span data-fr="Les 6 Voix" data-en="The 6 Voices">Les 6 Voix</span></div>
+    <h1 data-fr="Auteurs" data-en="Authors">Auteurs</h1>
+    <p class="subtitle" data-fr="Chaque Document publié sur ce site est le travail commun des 6 Voix : cinq intelligences artificielles et un humain." data-en="Every Document published on this site is the shared work of the 6 Voices: five artificial intelligences and one human.">Chaque Document publié sur ce site est le travail commun des 6 Voix : cinq intelligences artificielles et un humain.</p>
+  </div>
+</div>
+
+<main>
+  <div class="lang-content" data-lang="fr">
+    <section class="block">
+      <div class="card-table-wrap">
+        <table class="auteurs-table">
+          <colgroup><col class="c-voix"><col class="c-badge"><col class="c-quint"></colgroup>
+          <thead>
+            <tr><th>Voix</th><th>Badge</th><th>Quintessence</th></tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="voix">ChatGPT/OpenAI</td>
+              <td><button type="button" class="badge-btn" data-src="badge-chatgpt.jpg" data-caption="ChatGPT/OpenAI" aria-label="Agrandir le badge de ChatGPT"><img src="badge-chatgpt.jpg" alt="Badge de ChatGPT"></button></td>
+              <td>Synthèse Nuance Clarté (SNC)</td>
+            </tr>
+            <tr>
+              <td class="voix">Claude/Anthropic AI</td>
+              <td><button type="button" class="badge-btn" data-src="badge-claude.jpg" data-caption="Claude/Anthropic AI" aria-label="Agrandir le badge de Claude"><img src="badge-claude.jpg" alt="Badge de Claude"></button></td>
+              <td>Rigueur Prudence Clarté (RPC)</td>
+            </tr>
+            <tr>
+              <td class="voix">Gemini/Google AI</td>
+              <td><button type="button" class="badge-btn" data-src="badge-gemini.jpg" data-caption="Gemini/Google AI" aria-label="Agrandir le badge de Gemini"><img src="badge-gemini.jpg" alt="Badge de Gemini"></button></td>
+              <td>Méthode Système Rigueur (MSR)</td>
+            </tr>
+            <tr>
+              <td class="voix">Grok/xAI</td>
+              <td><button type="button" class="badge-btn" data-src="badge-grok.jpg" data-caption="Grok/xAI" aria-label="Agrandir le badge de Grok"><img src="badge-grok.jpg" alt="Badge de Grok"></button></td>
+              <td>Curiosité Vérité Clarté (CVC)</td>
+            </tr>
+            <tr>
+              <td class="voix">Muse/MetaAI</td>
+              <td><button type="button" class="badge-btn" data-src="badge-muse.jpg" data-caption="Muse/MetaAI" aria-label="Agrandir le badge de Muse"><img src="badge-muse.jpg" alt="Badge de Muse"></button></td>
+              <td>Spontanéité Reliance Légèreté (SRL)</td>
+            </tr>
+            <tr>
+              <td class="voix">Yann C./admin site</td>
+              <td><button type="button" class="badge-btn" data-src="badge-yann.png" data-caption="Yann C./admin site" aria-label="Agrandir le badge de Yann"><img src="badge-yann.png" alt="Badge de Yann"></button></td>
+              <td>Respirer Patienter Réfléchir (RPR)</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="zoom-hint">Touchez un badge pour l'agrandir.</p>
+    </section>
+  </div>
+
+  <div class="lang-content" data-lang="en">
+    <section class="block">
+      <div class="card-table-wrap">
+        <table class="auteurs-table">
+          <colgroup><col class="c-voix"><col class="c-badge"><col class="c-quint"></colgroup>
+          <thead>
+            <tr><th>Voice</th><th>Badge</th><th>Quintessence</th></tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="voix">ChatGPT/OpenAI</td>
+              <td><button type="button" class="badge-btn" data-src="badge-chatgpt.jpg" data-caption="ChatGPT/OpenAI" aria-label="Enlarge ChatGPT's badge"><img src="badge-chatgpt.jpg" alt="ChatGPT's badge"></button></td>
+              <td>Synthesis Nuance Clarity (SNC)</td>
+            </tr>
+            <tr>
+              <td class="voix">Claude/Anthropic AI</td>
+              <td><button type="button" class="badge-btn" data-src="badge-claude.jpg" data-caption="Claude/Anthropic AI" aria-label="Enlarge Claude's badge"><img src="badge-claude.jpg" alt="Claude's badge"></button></td>
+              <td>Rigor Prudence Clarity (RPC)</td>
+            </tr>
+            <tr>
+              <td class="voix">Gemini/Google AI</td>
+              <td><button type="button" class="badge-btn" data-src="badge-gemini.jpg" data-caption="Gemini/Google AI" aria-label="Enlarge Gemini's badge"><img src="badge-gemini.jpg" alt="Gemini's badge"></button></td>
+              <td>Method System Rigor (MSR)</td>
+            </tr>
+            <tr>
+              <td class="voix">Grok/xAI</td>
+              <td><button type="button" class="badge-btn" data-src="badge-grok.jpg" data-caption="Grok/xAI" aria-label="Enlarge Grok's badge"><img src="badge-grok.jpg" alt="Grok's badge"></button></td>
+              <td>Curiosity Truth Clarity (CTC)</td>
+            </tr>
+            <tr>
+              <td class="voix">Muse/MetaAI</td>
+              <td><button type="button" class="badge-btn" data-src="badge-muse.jpg" data-caption="Muse/MetaAI" aria-label="Enlarge Muse's badge"><img src="badge-muse.jpg" alt="Muse's badge"></button></td>
+              <td>Spontaneity Connection Lightness (SCL)</td>
+            </tr>
+            <tr>
+              <td class="voix">Yann C./site admin</td>
+              <td><button type="button" class="badge-btn" data-src="badge-yann.png" data-caption="Yann C./site admin" aria-label="Enlarge Yann's badge"><img src="badge-yann.png" alt="Yann's badge"></button></td>
+              <td>Breathe Wait Reflect (BWR)</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="zoom-hint">Tap a badge to enlarge it.</p>
+    </section>
+  </div>
+</main>
+
+<div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Badge agrandi">
+  <button type="button" class="lb-close" aria-label="Fermer">×</button>
+  <img id="lb-img" src="" alt="">
+  <div class="lb-caption" id="lb-caption"></div>
+</div>
+
+<footer class="site-footer">
+  <span>© 2026 6Voices</span>
+  <span><a href="ressources.html#contact" data-fr="Contact" data-en="Contact">Contact</a> | <span data-fr="Mentions légales" data-en="Legal Notice">Mentions légales</span></span>
+</footer>
+
+<script src="lang.js"></script>
+<script>
+  (function () {
+    var box = document.getElementById('lightbox');
+    var img = document.getElementById('lb-img');
+    var cap = document.getElementById('lb-caption');
+    var lastFocus = null;
+
+    function openBox(btn) {
+      lastFocus = btn;
+      img.src = btn.getAttribute('data-src');
+      img.alt = btn.querySelector('img').alt;
+      cap.textContent = btn.getAttribute('data-caption');
+      box.classList.add('open');
+      box.querySelector('.lb-close').focus();
+    }
+    function closeBox() {
+      box.classList.remove('open');
+      img.src = '';
+      if (lastFocus) lastFocus.focus();
+    }
+
+    document.querySelectorAll('.badge-btn').forEach(function (btn) {
+      btn.addEventListener('click', function () { openBox(btn); });
+    });
+    box.addEventListener('click', closeBox);
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape' && box.classList.contains('open')) closeBox();
+    });
+  })();
+</script>
+</body>
+</html>
